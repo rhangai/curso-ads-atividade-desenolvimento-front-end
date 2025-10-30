@@ -90,19 +90,27 @@ nav a {
   text-align: center;
   overflow: hidden;
   background: #000;
-}
 
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url(imagem/bg-hero.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  opacity: 0.6;
-  z-index: 0;
-  pointer-events: none;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(imagem/bg-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &.hero-cadastro::before {
+    background-image: url(imagem/bg-hero-cadastro.jpg);
+  }
+
+  &.hero-projeto::before {
+    background-image: url(imagem/bg-hero-projeto.jpg);
+  }
 }
 
 .hero-content {
@@ -125,14 +133,17 @@ nav a {
   font-size: 1rem;
 }
 
-.section-dividida {
+.section {
   max-width: 60rem;
   margin: 0 auto;
   padding: 2rem 2rem;
-  min-height: 40vh;
+}
+
+.section-dividida {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  min-height: 40vh;
 
   @media screen and (max-width: 60rem) {
     grid-template-columns: 1fr;
@@ -143,10 +154,6 @@ nav a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.about {
-  min-height: 40vh;
 }
 
 footer {

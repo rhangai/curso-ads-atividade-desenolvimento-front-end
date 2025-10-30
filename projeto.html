@@ -4,23 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto de Voluntários</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Header -->
     <header>
       <nav>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <div class="logo">&#128153; Voluntários</div>
-        <ul id="navMenu">
-          <li><a href="index.html" class="active">Início</a></li>
-          <li><a href="projeto.html">Projetos</a></li>
-          <li><a href="cadastro.html">Seja Voluntário</a></li>
-        </ul>
+        <div class="nav-esquerda">
+          <button class="nav-toggle">☰</button>
+          <div class="logo">&#128153; Voluntários</div>
+        </div>
+        <div class="nav-direita">
+          <ul id="nav-menu">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projeto.html" class="active">Projetos</a></li>
+            <li><a href="cadastro.html">Seja Voluntário</a></li>
+          </ul>
+        </div>
       </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero hero-projeto">
       <div class="hero-content">
         <h1>Nossos Projetos de Voluntariado</h1>
         <p>
@@ -31,7 +36,7 @@
     </section>
 
     <!-- Sobre o Projeto -->
-    <section class="about">
+    <section class="section about">
       <h2>Como Funciona</h2>
       <p>
         Nossos projetos de voluntariado conectam pessoas dispostas a ajudar com
@@ -77,7 +82,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="cta">
+    <section class="section cta">
       <div class="cta-content">
         <h2>Participe dos Nossos Projetos</h2>
         <p>Seja voluntário e faça parte dessa transformação!</p>
@@ -89,7 +94,7 @@
     </section>
 
     <!-- Contato -->
-    <section class="contact">
+    <section class="section contact">
       <h2>Fale Conosco</h2>
       <address>
         <p>
