@@ -1,7 +1,7 @@
 :root {
   --cor-primaria: #38a3a5;
-  --cor-nav: #22577a;
-  --cor-nav-clara: #2b6d99;
+  --cor-nav: #5390d9;
+  --cor-nav-clara: #5e60ce;
   --cor-2: #38a3a5;
   --cor-3: #57cc99;
   --cor-4: #80ed99;
@@ -107,13 +107,51 @@ nav a {
 
 .hero-content {
   z-index: 10;
+  max-width: 60rem;
 }
 
 .hero h1 {
   font-size: 4rem;
   letter-spacing: 0.1ch;
+  line-height: 1;
+  margin-bottom: 2rem;
+
+  @media screen and (max-width: 60rem) {
+    font-size: 2rem;
+  }
 }
 
 .hero p {
   font-size: 1rem;
+}
+
+.section-dividida {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  min-height: 40vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+
+  @media screen and (max-width: 60rem) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about {
+  min-height: 40vh;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
 }
