@@ -78,3 +78,42 @@ nav a {
     background-color: var(--cor-nav-clara);
   }
 }
+
+/* Hero */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  min-height: 60vh;
+  text-align: center;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(imagem/bg-hero.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  z-index: 10;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 0.1ch;
+}
+
+.hero p {
+  font-size: 1rem;
+}
