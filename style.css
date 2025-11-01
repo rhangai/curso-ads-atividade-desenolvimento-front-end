@@ -23,7 +23,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #22577a;
+  background: var(--cor-nav);
   background: linear-gradient(
     45deg,
     var(--cor-nav) 0%,
@@ -133,13 +133,26 @@ nav a {
   font-size: 1rem;
 }
 
+/* Footer das páginas */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+/* Base das seções */
 .section {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.section-content {
   max-width: 60rem;
   margin: 0 auto;
   padding: 2rem 2rem;
 }
 
-.section-dividida {
+.section-content-dividida {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -149,6 +162,14 @@ nav a {
     grid-template-columns: 1fr;
   }
 }
+.section-content > p {
+  margin-bottom: 2rem;
+}
+
+.section-content h2 {
+  margin-bottom: 1rem;
+  color: var(--cor-primaria);
+}
 
 .section-imagem {
   width: 100%;
@@ -156,9 +177,23 @@ nav a {
   object-fit: cover;
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem 2rem;
-  text-align: center;
+/* Componentes */
+.impact-cards {
+  display: grid;
+  gap: 2rem;
+  @media screen and (min-width: 60rem) {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+.card {
+  border: 1px solid var(--cor-2);
+  border-radius: 4px;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.card h3 {
+  color: var(--cor-2);
+  margin-bottom: 0.5rem;
 }
