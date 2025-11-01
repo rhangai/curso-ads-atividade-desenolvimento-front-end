@@ -1,7 +1,11 @@
 :root {
   --cor-primaria: #38a3a5;
+  --cor-primaria-escura: #175152;
+
   --cor-nav: #5390d9;
   --cor-nav-clara: #5e60ce;
+
+  --cor-erro: #d32f2f;
   --cor-2: #38a3a5;
   --cor-3: #57cc99;
   --cor-4: #80ed99;
@@ -237,11 +241,49 @@ fieldset {
     background-color: transparent;
     min-height: 2rem;
     font-size: 0.9rem;
+
+    &:user-invalid {
+      border-color: var(--cor-erro);
+    }
   }
 
   textarea {
     resize: vertical;
     min-height: 6rem;
     font-family: inherit;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.15s, color 0.15s;
+  cursor: pointer;
+
+  &:focus {
+    outline-width: 4px;
+  }
+}
+
+.btn-primary {
+  border-color: var(--cor-primaria);
+  background-color: var(--cor-primaria);
+  &:hover {
+    background-color: var(--cor-primaria-escura);
+  }
+}
+
+.btn-secondary {
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+  &:hover {
+    background-color: var(--cor-primaria-escura);
+    color: #fff;
   }
 }
