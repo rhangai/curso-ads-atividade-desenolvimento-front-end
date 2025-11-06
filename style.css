@@ -22,6 +22,15 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Utilitários de SPA */
+html:not(.spa) .spa-show {
+  display: none;
+}
+
+html.spa .spa-hidden {
+  display: none;
+}
+
 /* Header e navegação */
 nav {
   display: flex;
@@ -145,9 +154,48 @@ footer {
   text-align: center;
 }
 
+/* Botão */
+.btn {
+  text-decoration: none;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.15s, color 0.15s;
+  cursor: pointer;
+
+  &:focus {
+    outline-width: 4px;
+  }
+}
+
+.btn-primary {
+  border-color: var(--cor-primaria);
+  background-color: var(--cor-primaria);
+  &:hover {
+    background-color: var(--cor-primaria-escura);
+  }
+}
+
+.btn-secondary {
+  border-color: var(--cor-primaria);
+  color: var(--cor-primaria);
+  &:hover {
+    background-color: var(--cor-primaria-escura);
+    color: #fff;
+  }
+}
+
 /* Base das seções */
 .section {
   border-bottom: 1px solid #f0f0f0;
+}
+
+.section-form {
+  min-height: 35vh;
 }
 
 .section-content {
@@ -254,36 +302,92 @@ fieldset {
   }
 }
 
-.btn {
-  text-decoration: none;
-  border: 1px solid transparent;
-  background-color: transparent;
-  padding: 0.5rem 1rem;
-  border-radius: 2rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: background-color 0.15s, color 0.15s;
-  cursor: pointer;
-
-  &:focus {
-    outline-width: 4px;
-  }
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
 
-.btn-primary {
-  border-color: var(--cor-primaria);
-  background-color: var(--cor-primaria);
-  &:hover {
-    background-color: var(--cor-primaria-escura);
-  }
+.form-voluntarios-menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.btn-secondary {
-  border-color: var(--cor-primaria);
+#formVoluntarios {
+  padding: 1rem 0 2rem;
+}
+
+#formVoluntarios h3 {
   color: var(--cor-primaria);
-  &:hover {
-    background-color: var(--cor-primaria-escura);
-    color: #fff;
-  }
+}
+
+.voluntario-card {
+  border: 1px solid var(--cor-4);
+  border-radius: 4px;
+  padding: 0.5rem 0.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.voluntario-card-header {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.voluntario-card-dados {
+  flex: 1 1 0;
+}
+.voluntario-card-interesses {
+  flex: 0 0 auto;
+}
+
+.voluntario-card-dado-nome {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.voluntario-card-dado-idade {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.voluntario-card-dado-email {
+  font-size: 0.8rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.voluntario-card-dado-telefone {
+  font-size: 0.8rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.voluntario-card-dado-interesse {
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+}
+
+.voluntario-card-dado-disponibilidade {
+  font-size: 0.85rem;
+  color: #333;
+  font-weight: 500;
+  text-align: right;
+  font-style: italic;
+}
+
+.voluntario-card-motivo {
+  font-size: 0.8rem;
+  padding-left: 2rem;
+}
+
+.voluntario-empty {
+  text-align: center;
+  color: #888;
+  padding: 4rem 8rem;
 }

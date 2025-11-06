@@ -37,13 +37,55 @@
 
     <!-- Formulário de Cadastro -->
     <main>
-      <section class="section signup-section">
+      <section class="section section-form">
         <div class="section-content">
-          <h2>Cadastro de Voluntários</h2>
-          <div class="success-message" id="successMessage">
-            ✅ Cadastro realizado com sucesso! Entraremos em contato em breve.
+          <h2>Voluntários</h2>
+          <div class="form-voluntarios-menu" id="menuVoluntarios">
+            <button
+              class="btn btn-secondary spa-show"
+              onclick="limparVoluntariosAction()"
+            >
+              Limpar Voluntários
+            </button>
+            <button
+              class="btn btn-primary spa-show"
+              onclick="abrirFormVoluntario()"
+            >
+              Cadastrar Novo Voluntário
+            </button>
           </div>
-          <form id="volunteerForm" onsubmit="handleSubmit(event)">
+          <div id="tabelaVoluntarios">
+            <div class="voluntario-card">
+              <div class="voluntario-card-header">
+                <div class="voluntario-card-dados">
+                  <div>
+                    <span class="voluntario-card-dado-nome">Renan Hangai</span>
+                    <span class="voluntario-card-dado-idade">33 anos</span>
+                  </div>
+                  <div class="voluntario-card-dado-email">email@email.com</div>
+                  <div class="voluntario-card-dado-telefone">
+                    (11) 99999 9999
+                  </div>
+                </div>
+                <div class="voluntario-card-interesses">
+                  <div class="voluntario-card-dado-interesse">Interesse</div>
+                  <div class="voluntario-card-dado-ajuda">Ajuda</div>
+                </div>
+              </div>
+              <div class="voluntario-card-motivo">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero
+                cumque accusamus obcaecati sed beatae facere facilis odit esse,
+                accusantium nemo repudiandae doloremque magni natus
+                exercitationem consequatur ad placeat velit rerum?
+              </div>
+            </div>
+          </div>
+          <form
+            id="formVoluntarios"
+            onsubmit="cadastrarVoluntario(event)"
+            class="spa-hidden"
+          >
+            <h3>Cadastro de Novo Voluntário</h3>
             <fieldset>
               <legend>Dados Pessoais</legend>
               <div class="form-group">
@@ -76,7 +118,6 @@
                 />
               </div>
             </fieldset>
-
             <fieldset>
               <legend>Disponibilidade</legend>
               <div class="form-group">
@@ -103,7 +144,6 @@
                 </select>
               </div>
             </fieldset>
-
             <fieldset>
               <legend>Informações Adicionais</legend>
               <div class="form-group">
@@ -125,19 +165,19 @@
                 ></textarea>
               </div>
             </fieldset>
-
-            <button type="submit" class="btn btn-primary">
-              Enviar Cadastro
-            </button>
+            <div class="form-actions">
+              <button
+                type="button"
+                class="btn btn-secondary spa-show"
+                onclick="cancelarFormVoluntario()"
+              >
+                Cancelar Cadastro
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Enviar Cadastro
+              </button>
+            </div>
           </form>
-        </div>
-      </section>
-      <!-- Lista de Voluntários Cadastrados -->
-      <section class="section voluntarios-lista">
-        <div class="section-content">
-          <h2>Voluntários Cadastrados</h2>
-          <div id="tabelaVoluntarios"></div>
-          <button class="btn btn-secondary">Limpar Tabela</button>
         </div>
       </section>
     </main>
@@ -149,5 +189,7 @@
       </p>
       <p>Feito com &#10084;&#65039; para transformar vidas</p>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
