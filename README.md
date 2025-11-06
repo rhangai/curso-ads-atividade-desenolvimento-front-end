@@ -20,3 +20,8 @@ Projeto de voluntariado para a aula de FrontEnd
 - [Orientações](https://alt-5d152e0e8981d.blackboard.com/bbcswebdav/courses/ULTRA_14864_12_100_BACKUP/Pasta%20da%20Disciplina/Experi%C3%AAncias%20Pr%C3%A1ticas/Unidade%20III/)
 - Adicionado script.js
 - Implementado página de cadastro via JS com listagem e cadastro de voluntários
+
+## Entrega 4
+
+- [Orientações](https://alt-5d152e0e8981d.blackboard.com/bbcswebdav/courses/ULTRA_14864_12_100_BACKUP/Pasta%20da%20Disciplina/Experi%C3%AAncias%20Pr%C3%A1ticas/Unidade%20IV/)
+- Feito Deploy - Não tem Release pois a versão é a mesma da Entrega 3
